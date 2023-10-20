@@ -21,12 +21,13 @@ export class AppComponent implements OnInit {
       username: new FormControl(null),
       dob: new FormControl(null),
       gender: new FormControl('male'),
-  
+      address: new FormGroup({
         street: new FormControl(null,[Validators.required,Validators.minLength(10)]),
         country: new FormControl('India'),
         city: new FormControl(null),
         region: new FormControl(null),
-        postal: new FormControl(null),
+        postal: new FormControl(null,Validators.required),
+      }),
 
      
       skills: new FormControl(null),
